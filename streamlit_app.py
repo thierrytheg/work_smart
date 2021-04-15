@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-option=st.sidebar.selectbox(("Choose one of the options below","GL Outliers","Intercompany"))
+option=st.sidebar.selectbox("",("Choose one of the options below","GL Outliers","Intercompany"))
 
 
 
