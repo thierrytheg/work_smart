@@ -1,4 +1,3 @@
 chord
 requests
-json
 streamlit
