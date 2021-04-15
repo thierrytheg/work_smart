@@ -6,8 +6,9 @@ import os
 import matplotlib.pyplot as plt
 import numpy as np
 
-#st.write(st.secrets["chord_key"])
-#st.write(st.secrets["chord_user"])
+
+option=st.sidebar.selectbox(("Choose one of the options below","GL Outliers","Intercompany"))
+
 
 
 def download_link_csv(object_to_download, download_filename, download_link_text):
