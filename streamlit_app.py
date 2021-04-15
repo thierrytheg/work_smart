@@ -5,6 +5,9 @@ import base64
 import os
 import matplotlib.pyplot as plt
 import numpy as np
+import requests
+import json
+import streamlit.components.v1 as components
 
 def download_link_csv(object_to_download, download_filename, download_link_text):
     if isinstance(object_to_download,pd.DataFrame):
@@ -28,13 +31,13 @@ if option=="Intercompany":
 ]
 
     names = ["Action", "Adventure", "Comedy", "Drama", "Fantasy", "Thriller"]
-    import requests
+    
 
     url = "https://api.shahin.dev/chord"
     payload={'names': names, 'matrix':matrix,'width': 500,'title':'Intercompany Balances','verb':' '}
 
 
-    import streamlit as st
+    
 
     user=st.secrets["user"]
     key=st.secrets["key"]
@@ -42,12 +45,9 @@ if option=="Intercompany":
     result = requests.post(url, json=payload, auth=(user, key))
 
 
-
-    import json
-
     c=result.content.decode("utf-8")
 
-    import streamlit.components.v1 as components
+
 
     # bootstrap 4 collapse example
     components.html(
