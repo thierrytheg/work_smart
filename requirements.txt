@@ -1,3 +1,11 @@
 chord
 requests
 streamlit
+
+altair
+openpyxl
+
+pandas==1.2.3
+xlrd
+matplotlib
+numpy==1.19.5
