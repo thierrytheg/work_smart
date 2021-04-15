@@ -17,7 +17,7 @@ option=st.sidebar.selectbox("",("Choose one of the options below","GL Outliers",
 
 if option=="Choose one of the options below":
     pass
-if option="Intercompany":
+if option=="Intercompany":
     matrix = [
     [0, 5, 6, 4, 7, 4],
     [5, 0, 5, 4, 6, 5],
