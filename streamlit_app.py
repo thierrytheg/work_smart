@@ -8,6 +8,12 @@ import numpy as np
 import requests
 import json
 import streamlit.components.v1 as components
+from PIL import Image
+
+image=open('linkedin.png')
+st.image(image)
+
+
 
 def download_link_csv(object_to_download, download_filename, download_link_text):
     if isinstance(object_to_download,pd.DataFrame):
