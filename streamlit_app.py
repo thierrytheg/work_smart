@@ -10,8 +10,8 @@ import json
 import streamlit.components.v1 as components
 from PIL import Image
 
-image=Image.open('linkedin.png')
-st.image(image)
+pic=Image.open('linkedin.png')
+st.image(pic)
 
 
 
