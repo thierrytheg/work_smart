@@ -8,7 +8,7 @@ import numpy as np
 import requests
 import json
 import streamlit.components.v1 as components
-from PIL import Image
+
 
 
 import awesome_streamlit as ast
@@ -46,11 +46,8 @@ option=st.sidebar.selectbox("options",("Choose one of the options below","GL Out
 
 
 if option=="Choose one of the options below":
-    write()
-    st.write("Click here to launch my Linkedin page")
-    pic=Image.open('linkedin.png')
-    st.image(pic)
-    #components.html(linkedin,height=1000)
+    pass
+    
 if option=="Intercompany":
     matrix = [
     [0, 5, 6, 4, 7, 4],
