@@ -18,8 +18,11 @@ def download_link_csv(object_to_download, download_filename, download_link_text)
 
 option=st.sidebar.selectbox("",("Choose one of the options below","GL Outliers","Intercompany"))
 
+linkedin='<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="VERTICAL" data-vanity="thierry-haddad" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ca.linkedin.com/in/thierry-haddad?trk=profile-badge">Thierry Haddad</a></div>'
+              
+
 if option=="Choose one of the options below":
-    pass
+    components.html(linkedin,height=1000)
 if option=="Intercompany":
     matrix = [
     [0, 5, 6, 4, 7, 4],
@@ -49,12 +52,11 @@ if option=="Intercompany":
 
 
 
-    # bootstrap 4 collapse example
+    #  4 collapse example
     components.html(
         c,
         height=1000
-    )
-    
+    ) 
 if option=="GL Outliers":
 
 
