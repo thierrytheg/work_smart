@@ -44,6 +44,7 @@ def download_link_csv(object_to_download, download_filename, download_link_text)
 
 option=st.sidebar.selectbox("options",("Choose one of the options below","GL Outliers","Intercompany"))
 
+write()
 
 if option=="Choose one of the options below":
     pass
