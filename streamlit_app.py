@@ -10,11 +10,6 @@ import json
 import streamlit.components.v1 as components
 from PIL import Image
 
-#pic=Image.open('linkedin.png')
-#st.image(pic)
-
-
-
 def download_link_csv(object_to_download, download_filename, download_link_text):
     if isinstance(object_to_download,pd.DataFrame):
         object_to_download = object_to_download.to_csv(index=False)
@@ -30,7 +25,9 @@ linkedin='<script src="https://platform.linkedin.com/badges/js/profile.js" async
 
 if option=="Choose one of the options below":
     st.write("Click here to launch my Linkedin page")
-    components.html(linkedin,height=1000)
+    pic=Image.open('linkedin.png')
+    st.image(pic)
+    #components.html(linkedin,height=1000)
 if option=="Intercompany":
     matrix = [
     [0, 5, 6, 4, 7, 4],
