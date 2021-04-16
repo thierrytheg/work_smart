@@ -2,7 +2,7 @@ chord
 requests
 streamlit
 webbrowser
-PIL
+Pillow
 
 altair
 openpyxl
