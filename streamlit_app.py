@@ -55,7 +55,6 @@ if option=="Intercompany":
     [0, 0, 0, 0, 3549285.75],
     [50000, 0, 0, 0, 7046743.63],
     [732000, 3549285.75, 7046743.63, 0],
-,
 ]
 
     names = ["Company 1", "Company 2", "Company 3", "Company 4"]
