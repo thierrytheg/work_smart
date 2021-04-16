@@ -29,8 +29,8 @@ For more details see the [Contribute](https://github.com/marcskovmadsen/awesome-
 ## The Developer
 This project is developed by Marc Skov Madsen. You can learn more about me at
 [datamodelsanalytics.com](https://datamodelsanalytics.com).
-Feel free to reach out if you wan't to join the project as a developer. You can find my contact details at [datamodelsanalytics.com](https://datamodelsanalytics.com).
-[<img src="https://github.com/MarcSkovMadsen/awesome-streamlit/blob/master/assets/images/datamodelsanalytics.png?raw=true" style="max-width: 700px">](https://datamodelsanalytics.com)
+Feel free to reach out if you wan't to join the project as a developer. You can find my contact details at [https://thierrytheg.pythonanywhere.com/home.html](https://thierrytheg.pythonanywhere.com/home.html).
+[<img src="https://github.com/thierrytheg/work_smart/blob/main/linkedin.png?raw=true" style="max-width: 700px">]https://thierrytheg.pythonanywhere.com/home.html)
 """,
             unsafe_allow_html=True,
         )
@@ -44,9 +44,6 @@ def download_link_csv(object_to_download, download_filename, download_link_text)
 
 option=st.sidebar.selectbox("options",("Choose one of the options below","GL Outliers","Intercompany"))
 
-
-
-linkedin='<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script><div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="thierry-haddad" data-version="v1" ><a class="badge-base__link LI-simple-link" href="https://ca.linkedin.com/in/thierry-haddad?trk=profile-badge" target="_blank">Click here</a></div>'
 
 if option=="Choose one of the options below":
     write()
