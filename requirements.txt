@@ -1,7 +1,6 @@
 chord
 requests
 streamlit
-webbrowser
 Pillow
 
 altair
