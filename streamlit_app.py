@@ -63,7 +63,7 @@ if option=="Intercompany":
     
 
     url = "https://api.shahin.dev/chord"
-    payload={'names': names, 'matrix':matrix,'width': 500,'title':'Intercompany Balances','verb':'','conjuction':'','noun':'','padding':0.5,'symmetric':False}
+    payload={'names': names, 'matrix':matrix,'width': 500,'verb':'','conjuction':'','noun':'','padding':0.5,'symmetric':False,'allow_download':False}
 
 
     
