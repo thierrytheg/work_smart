@@ -2,6 +2,7 @@ chord
 requests
 streamlit
 Pillow
+awesome_streamlit
 
 altair
 openpyxl
