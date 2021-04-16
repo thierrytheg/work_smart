@@ -59,7 +59,7 @@ if option=="Intercompany":
     [4, 5, 5, 5, 4, 0],
 ]
 
-    names = ["Action", "Adventure", "Comedy", "Drama", "Fantasy", "Thriller"]
+    names = ["Company 1", "Company 2", "Company 3", "Company 4", "Company 5", "Company 6"]
     
 
     url = "https://api.shahin.dev/chord"
