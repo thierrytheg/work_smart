@@ -10,8 +10,8 @@ import json
 import streamlit.components.v1 as components
 from PIL import Image
 
-pic=Image.open('linkedin.png')
-st.image(pic)
+#pic=Image.open('linkedin.png')
+#st.image(pic)
 
 
 
@@ -24,8 +24,7 @@ def download_link_csv(object_to_download, download_filename, download_link_text)
 
 option=st.sidebar.selectbox("options",("Choose one of the options below","GL Outliers","Intercompany"))
 
-#linkedin='<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script><div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="thierry-haddad" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ca.linkedin.com/in/thierry-haddad?trk=profile-badge">Thierry Haddad</a></div>'
-linkedin='<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script><div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="thierry-haddad" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ca.linkedin.com/in/thierry-haddad?trk=profile-badge"></a></div>'
+linkedin='<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script><div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="HORIZONTAL" data-vanity="thierry-haddad" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://ca.linkedin.com/in/thierry-haddad?trk=profile-badge" target="_blank"></a></div>'
 
 if option=="Choose one of the options below":
     components.html(linkedin,height=1000)
