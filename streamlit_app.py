@@ -51,7 +51,7 @@ if option=="Choose one of the options below":
     
 if option=="Intercompany":
     matrix = [
-    [5,000.00, 5, 6, 4, 7, 4],
+    [5000.00, 5, 6, 4, 7, 4],
     [5, 0, 5, 4, 6, 5],
     [6, 5, 0, 4, 5, 5],
     [4, 4, 4, 0, 5, 5],
