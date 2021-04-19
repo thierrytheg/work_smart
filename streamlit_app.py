@@ -40,7 +40,7 @@ def download_link_csv(object_to_download, download_filename, download_link_text)
     b64 = base64.b64encode(object_to_download.encode()).decode()
     return f'<a href="data:file/txt;base64,{b64}" download="{download_filename}">{download_link_text}</a>'
 
-option=st.sidebar.selectbox("options",("Choose one of the options below","GL Outliers","Intercompany"))
+option=st.sidebar.selectbox("",("Choose one of the options below","GL Outliers","Intercompany"))
 
 write()
 
