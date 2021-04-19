@@ -19,7 +19,7 @@ def write():
     with st.spinner("Loading About ..."):
         #ast.shared.components.title_awesome(" - About")
         st.sidebar.markdown(
-            """## The Project
+            """
 My experience as an accountant combined with my programming skills allow me to design and implement tools that capitalize on data mining, automation and machine learning.
 
 My mission is to conceptualize and be instrumental in designing what every accounting department will look like tomorrow.
