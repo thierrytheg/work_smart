@@ -22,6 +22,8 @@ def write():
             """## The Project
 My experience as an accountant combined with my programming skills allow me to design and implement tools that capitalize on data mining, automation and machine learning. My mission is to conceptualize and be instrumental in designing what every accounting department will look like tomorrow.
 
+To get a glimpse of what I am currently working on, visit my [blog] (thierrytheg.pythonanywhere.com)
+
 For more details see the [Contribute](https://github.com/marcskovmadsen/awesome-streamlit#contribute) section of the README file.
 ## The Developer
 This project is developed by Marc Skov Madsen. You can learn more about me at
