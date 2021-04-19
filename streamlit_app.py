@@ -19,12 +19,14 @@ def write():
     with st.spinner("Loading About ..."):
         #ast.shared.components.title_awesome(" - About")
         st.sidebar.markdown(
-            """## Contributions
+            """## The Project
 This an open source project and you are very welcome to **contribute** your awesome
 comments, questions, resources and apps as
 [issues](https://github.com/MarcSkovMadsen/awesome-streamlit/issues) or
 [pull requests](https://github.com/MarcSkovMadsen/awesome-streamlit/pulls)
 to the [source code](https://github.com/MarcSkovMadsen/awesome-streamlit).
+My experience as an accountant combined with my programming skills allow me to design and implement tools that capitalize on data mining, automation and machine learning. My mission is to conceptualize and be instrumental in designing what every accounting department will look like tomorrow.
+
 For more details see the [Contribute](https://github.com/marcskovmadsen/awesome-streamlit#contribute) section of the README file.
 ## The Developer
 This project is developed by Marc Skov Madsen. You can learn more about me at
