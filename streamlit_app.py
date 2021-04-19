@@ -24,12 +24,7 @@ My experience as an accountant combined with my programming skills allow me to d
 
 To get a glimpse of what I am currently working on, visit my [blog] (https://thierrytheg.pythonanywhere.com)
 
-For more details see the [Contribute](https://github.com/marcskovmadsen/awesome-streamlit#contribute) section of the README file.
-## The Developer
-This project is developed by Marc Skov Madsen. You can learn more about me at
-[datamodelsanalytics.com](https://datamodelsanalytics.com).
-Feel free to reach out if you wan't to join the project as a developer. You can find my contact details at [https://thierrytheg.pythonanywhere.com/home.html](https://thierrytheg.pythonanywhere.com/home.html).
-[<img src="https://github.com/thierrytheg/work_smart/blob/main/linkedin.png?raw=true" style="max-width: 700px">]https://thierrytheg.pythonanywhere.com/home.html)
+
 """,
             unsafe_allow_html=True,
         )
