@@ -48,6 +48,8 @@ if option=="Choose one of the options below":
     pass
     
 if option=="Intercompany":
+    df=pd.read_excel('intercompany.xlsx')
+    
     tmp_download_link_csv = download_link_csv(df, 'intercompany_template.csv', 'Download the template here.')
     st.markdown(tmp_download_link_csv, unsafe_allow_html=True)
     
