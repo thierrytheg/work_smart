@@ -71,22 +71,21 @@ if option=="Intercompany":
 
         else:
             df=pd.read_excel('intercompany.xlsx')
-            matrix=df['Amount'].to_list()
-            matrix=matrix.to_list()
+            #matrix=df['Amount'].to_list()
+            #matrix=matrix.to_list()
             
             #st.error("You are currently viewing a sample dataset. Upload your own file to view your data.")
     except:
         pass
     
-    st.write(matrix)
     
     
-    #matrix = [
-    #[0, 0, 50000, 732000],
-    #[0, 0, 0, 3549285],
-    #[50000, 0, 0, 7046743],
-    #[732000, 3549285, 7046743, 0],
-    #]
+    matrix = [
+    [0, 0, 50000, 732000],
+    [0, 0, 0, 3549285],
+    [50000, 0, 0, 7046743],
+    [732000, 3549285, 7046743, 0],
+    ]
 
     names = ["Company 1", "Company 2", "Company 3", "Company 4"]
     
