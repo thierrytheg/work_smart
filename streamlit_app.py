@@ -48,8 +48,32 @@ if option=="Choose one of the options below":
     pass
     
 if option=="Intercompany":
-    tmp_download_link_csv = download_link_csv( 'intercompany_template.csv', 'Download the template here.')
-    st.markdown(tmp_download_link_csv, unsafe_allow_html=True)
+    #tmp_download_link_csv = download_link_csv('test', 'intercompany_template.csv', 'Download the template here.')
+    #st.markdown(tmp_download_link_csv, unsafe_allow_html=True)
+    
+        uploaded_file = st.file_uploader("Choose a file")
+
+    try:
+        if uploaded_file is not None:
+            try:
+                df=pd.read_excel(uploaded_file)
+
+            except:
+                try:
+                    df=pd.read_csv(uploaded_file)
+
+                except:
+                    pass
+
+        else:
+            df=pd.read_excel('intercompany.xlsx')
+            #st.error("You are currently viewing a sample dataset. Upload your own file to view your data.")
+    except:
+        pass
+    
+    
+    
+    
     matrix = [
     [0, 0, 50000, 732000],
     [0, 0, 0, 3549285],
@@ -62,9 +86,7 @@ if option=="Intercompany":
 
     url = "https://api.shahin.dev/chord"
     payload={'names': names, 'matrix':matrix,'width': 500,'verb':'','conjuction':'','noun':'','padding':0.5,'symmetric':False,'asymmetric':False}
-
-
-    
+  
 
     user=st.secrets["user"]
     key=st.secrets["key"]
