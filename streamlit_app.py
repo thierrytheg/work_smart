@@ -48,6 +48,8 @@ if option=="Choose one of the options below":
     pass
     
 if option=="Intercompany":
+    tmp_download_link_csv = download_link_csv(df_final, 'intercompany_template.csv', 'Download the template here.')
+    st.markdown(tmp_download_link_csv, unsafe_allow_html=True)
     matrix = [
     [0, 0, 50000, 732000],
     [0, 0, 0, 3549285],
