@@ -59,16 +59,19 @@ if option=="Intercompany":
         if uploaded_file is not None:
             try:
                 df=pd.read_excel(uploaded_file)
+                matrix=df.to_numpy()
 
             except:
                 try:
                     df=pd.read_csv(uploaded_file)
+                    matrix=df.to_numpy()
 
                 except:
                     pass
 
         else:
             df=pd.read_excel('intercompany.xlsx')
+            matrix=df.to_numpy()
             #st.error("You are currently viewing a sample dataset. Upload your own file to view your data.")
     except:
         pass
