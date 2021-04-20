@@ -51,7 +51,7 @@ if option=="Intercompany":
     #tmp_download_link_csv = download_link_csv('test', 'intercompany_template.csv', 'Download the template here.')
     #st.markdown(tmp_download_link_csv, unsafe_allow_html=True)
     
-        uploaded_file = st.file_uploader("Choose a file")
+    uploaded_file = st.file_uploader("Choose a file")
 
     try:
         if uploaded_file is not None:
