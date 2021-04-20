@@ -78,7 +78,7 @@ if option=="Intercompany":
     except:
         pass
     
-    
+    st.write(matrix)
     
     
     #matrix = [
