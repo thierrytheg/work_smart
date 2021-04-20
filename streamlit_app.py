@@ -48,8 +48,8 @@ if option=="Choose one of the options below":
     pass
     
 if option=="Intercompany":
-    #tmp_download_link_csv = download_link_csv('test', 'intercompany_template.csv', 'Download the template here.')
-    #st.markdown(tmp_download_link_csv, unsafe_allow_html=True)
+    tmp_download_link_csv = download_link_csv(df, 'intercompany_template.csv', 'Download the template here.')
+    st.markdown(tmp_download_link_csv, unsafe_allow_html=True)
     
     uploaded_file = st.file_uploader("Choose a file")
 
