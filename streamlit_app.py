@@ -71,7 +71,7 @@ if option=="Intercompany":
 
         else:
             df=pd.read_excel('intercompany.xlsx')
-            matrix=list(df['Amount'])
+            matrix=df['Amount']
             matrix=list(matrix)
             
             #st.error("You are currently viewing a sample dataset. Upload your own file to view your data.")
