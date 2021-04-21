@@ -87,7 +87,7 @@ if option=="Intercompany":
     #[732000, 3549285, 7046743, 0],
     #]
 
-    st.write(df.T)
+    st.write((df.T).to_numpy())
     
     names = ["Company 1", "Company 2", "Company 3", "Company 4"]
     
