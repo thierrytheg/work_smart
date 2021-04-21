@@ -87,7 +87,7 @@ if option=="Intercompany":
     #[732000, 3549285, 7046743, 0],
     #]
 
-    st.write(matrix)
+    st.write(df.T)
     
     names = ["Company 1", "Company 2", "Company 3", "Company 4"]
     
