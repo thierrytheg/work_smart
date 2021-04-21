@@ -64,7 +64,7 @@ if option=="Intercompany":
             except:
                 try:
                     df=pd.read_csv(uploaded_file)
-                    #matrix=df.to_numpy()
+                    matrix=df.to_numpy()
 
                 except:
                     pass
@@ -80,13 +80,15 @@ if option=="Intercompany":
     
     
     
-    matrix = [
-    [0, 0, 50000, 732000],
-    [0, 0, 0, 3549285],
-    [50000, 0, 0, 7046743],
-    [732000, 3549285, 7046743, 0],
-    ]
+    #matrix = [
+    #[0, 0, 50000, 732000],
+    #[0, 0, 0, 3549285],
+    #[50000, 0, 0, 7046743],
+    #[732000, 3549285, 7046743, 0],
+    #]
 
+    st.write(matrix)
+    
     names = ["Company 1", "Company 2", "Company 3", "Company 4"]
     
 
