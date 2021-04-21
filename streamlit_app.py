@@ -59,7 +59,7 @@ if option=="Intercompany":
         if uploaded_file is not None:
             try:
                 df=pd.read_excel(uploaded_file)
-                #matrix=df.to_numpy()
+                matrix=df.to_numpy()
 
             except:
                 try:
@@ -71,7 +71,7 @@ if option=="Intercompany":
 
         else:
             df=pd.read_excel('intercompany.xlsx')
-            #matrix=df['Amount'].to_list()
+            matrix=df.to_numpy()
             #matrix=matrix.to_list()
             
             #st.error("You are currently viewing a sample dataset. Upload your own file to view your data.")
