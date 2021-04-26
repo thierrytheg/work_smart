@@ -86,9 +86,9 @@ if option=="Intercompany":
     try:
         if uploaded_file is not None:
             try:
-                #@st.cache(suppress_st_warning=True)
                 df=pd.read_excel(uploaded_file)
                 generate_chord(df)  
+                
 
 
             except:
@@ -96,15 +96,13 @@ if option=="Intercompany":
                     df=pd.read_csv(uploaded_file)
                     generate_chord(df)  
 
-
                 except Exception as e:
-                    
                     st.error(e," Make sure to use the template to avoid any errors. If the problem persists, do not hesitate to contact me.")
                     st.stop()
 
         else:
             df=pd.read_excel('intercompany.xlsx')
-            generate_chord(df)  
+            generate_chord(df) 
 
     except Exception as e:
               
