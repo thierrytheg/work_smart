@@ -10,9 +10,6 @@ import json
 import streamlit.components.v1 as components
 import awesome_streamlit as ast
 
-error1='error1'
-error2='error1'
-
 def generate_chord(df):
     df_pivot=df.pivot_table(values='Amount',
                         index=['Company From'],
@@ -41,14 +38,8 @@ def generate_chord(df):
         height=1000
     ) 
 
-
-
-
-
-
 def write():
     """Used to write the page in the app.py file"""
-    #with st.spinner("Loading About ..."):
     st.sidebar.markdown(
             """
 My experience as an accountant combined with my programming skills allow me to design and implement tools that capitalize on data mining, automation and machine learning.
@@ -109,7 +100,7 @@ if option=="Intercompany":
         st.error(e," Make sure to use the template to avoid any errors. If the problem persists, do not hesitate to contact me.")
         st.stop()
     
-    generate_chord(df)  
+    #generate_chord(df)  
 
 
 if option=="GL Outliers":
