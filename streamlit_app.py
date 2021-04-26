@@ -91,11 +91,11 @@ if option=="Intercompany":
             except:
                 try:
                     df=pd.read_csv(uploaded_file)
-                    @st.cache(suppress_st_warning=True)
                     generate_chord(df)  
 
 
-                except Exception as e:@st.cache(suppress_st_warning=True)
+                except Exception as e:
+                    @st.cache(suppress_st_warning=True)
                     st.error("An error occured: %s" %e)
 
         else:
