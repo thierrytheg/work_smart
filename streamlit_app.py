@@ -22,7 +22,7 @@ def generate_chord(df):
     names=list(df_pivot.columns)
    
     url = "https://api.shahin.dev/chord"
-    payload={'names': names, 'matrix':matrix,'width': 900,'verb':'','conjuction':'','noun':'','padding':0.1,'symmetric':False,'asymmetric':False,'allow_download':True}
+    payload={'names': names, 'matrix':matrix,'width': 800,'verb':'','conjuction':'','noun':'','padding':0.1,'symmetric':False,'asymmetric':False,'allow_download':True}
   
 
     user=st.secrets["user"]
