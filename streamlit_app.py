@@ -10,7 +10,7 @@ import json
 import streamlit.components.v1 as components
 import awesome_streamlit as ast
 
-import sys
+
 
 error1='Make sure to use the template to avoid any errors.'
 error2='If the problem persists, do not hesitate to contact me.'
@@ -104,7 +104,6 @@ if option=="Intercompany":
         st.error(error2)
         st.stop()
     
-    #generate_chord(df)  
 
 
 if option=="GL Outliers":
