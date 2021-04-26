@@ -12,6 +12,7 @@ import awesome_streamlit as ast
 
 @st.cache(suppress_st_warning=True)
 def generate_chord(df):
+    st.write("test")
     df_pivot=df.pivot_table(values='Amount',
                         index=['Company From'],
                         columns=['Company To'],
