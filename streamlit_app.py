@@ -45,9 +45,8 @@ def generate_chord(df):
 
 def write():
     """Used to write the page in the app.py file"""
-    with st.spinner("Loading About ..."):
-        #ast.shared.components.title_awesome(" - About")
-        st.sidebar.markdown(
+    #with st.spinner("Loading About ..."):
+    st.sidebar.markdown(
             """
 My experience as an accountant combined with my programming skills allow me to design and implement tools that capitalize on data mining, automation and machine learning.
 My mission is to conceptualize and be instrumental in designing what every accounting department will look like tomorrow.
