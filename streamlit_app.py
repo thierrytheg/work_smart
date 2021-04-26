@@ -10,6 +10,9 @@ import json
 import streamlit.components.v1 as components
 import awesome_streamlit as ast
 
+error1='error1'
+error2='error1'
+
 def generate_chord(df):
     df_pivot=df.pivot_table(values='Amount',
                         index=['Company From'],
@@ -96,7 +99,7 @@ if option=="Intercompany":
 
                 except Exception as e:
                     
-                    st.error("An error occured: %s./n Make sure" %e)
+                    st.error("%e/nMake sure")
                     st.stop()
 
         else:
@@ -104,8 +107,8 @@ if option=="Intercompany":
             generate_chord(df)  
 
     except Exception as e:
-       
-        st.error("An error occured: %s./n Make sure" %e)
+              
+        st.error("%e/nMake sure")
         st.stop()
     
     generate_chord(df)  
