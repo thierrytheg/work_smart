@@ -10,7 +10,7 @@ import json
 import streamlit.components.v1 as components
 import awesome_streamlit as ast
 
-@st.cache(suppress_st_warning=True)
+@st.cache
 def generate_chord(df):
     df_pivot=df.pivot_table(values='Amount',
                         index=['Company From'],
