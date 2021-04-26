@@ -93,15 +93,15 @@ if option=="Intercompany":
                     generate_chord(df)  
 
 
-                except:
-                    st.error("An error occured. Make sure there are no negative figures in your table. If problem persits, do not hesitate to contact me.")
+                except Exception as e:
+                    st.error("An error occured: %s" %e)
 
         else:
             df=pd.read_excel('intercompany.xlsx')
             generate_chord(df)  
 
-    except:
-        st.error("An error occured. Make sure there are no negative figures in your table. If problem persits, do not hesitate to contact me.")
+    except Exception as e:
+        st.error("An error occured: %s" %e)
     
     generate_chord(df)  
 
