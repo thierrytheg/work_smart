@@ -99,7 +99,7 @@ if option=="Intercompany":
 
                 except Exception as e:
                     
-                    st.error("%s/n%s") %(e,error1)
+                    st.error(%s/n%s) %(e,error1)
                     st.stop()
 
         else:
@@ -108,7 +108,7 @@ if option=="Intercompany":
 
     except Exception as e:
               
-        st.error("%s/n%s") %(e,error1)
+        st.error(%s/n%s) %(e,error1)
         st.stop()
     
     generate_chord(df)  
