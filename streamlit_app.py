@@ -84,16 +84,18 @@ if option=="Intercompany":
         if uploaded_file is not None:
             try:
                 df=pd.read_excel(uploaded_file)
+                @st.cache(suppress_st_warning=True)
                 generate_chord(df)  
 
 
             except:
                 try:
                     df=pd.read_csv(uploaded_file)
+                    @st.cache(suppress_st_warning=True)
                     generate_chord(df)  
 
 
-                except Exception as e:
+                except Exception as e:@st.cache(suppress_st_warning=True)
                     st.error("An error occured: %s" %e)
 
         else:
@@ -101,6 +103,7 @@ if option=="Intercompany":
             generate_chord(df)  
 
     except Exception as e:
+        @st.cache(suppress_st_warning=True)
         st.error("An error occured: %s" %e)
     
     generate_chord(df)  
