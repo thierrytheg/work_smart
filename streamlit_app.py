@@ -83,8 +83,8 @@ if option=="Intercompany":
     try:
         if uploaded_file is not None:
             try:
-                df=pd.read_excel(uploaded_file)
                 @st.cache(suppress_st_warning=True)
+                df=pd.read_excel(uploaded_file)
                 generate_chord(df)  
 
 
