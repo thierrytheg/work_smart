@@ -99,7 +99,7 @@ if option=="Intercompany":
 
                 except Exception as e:
                     
-                    st.error(%s/n%s) %(e,error1)
+                    st.error(e," Make sure to use the template to avoid any errors. If the problem persists, do not hesitate to contact me.")
                     st.stop()
 
         else:
@@ -108,7 +108,7 @@ if option=="Intercompany":
 
     except Exception as e:
               
-        st.error(%s/n%s) %(e,error1)
+        st.error(e," Make sure to use the template to avoid any errors. If the problem persists, do not hesitate to contact me.")
         st.stop()
     
     generate_chord(df)  
