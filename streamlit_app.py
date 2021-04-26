@@ -8,30 +8,56 @@ import numpy as np
 import requests
 import json
 import streamlit.components.v1 as components
+#import awesome_streamlit as ast
+
+
+def generate_chord(df):
+    df_pivot=df.pivot_table(values='Amount',
+                        index=['Company From'],
+                        columns=['Company To'],
+                        aggfunc=np.sum,
+                        fill_value=0)
+
+    matrix=df_pivot.values.tolist()
+    names=list(df_pivot.columns)
+   
+    url = "https://api.shahin.dev/chord"
+    payload={'names': names, 'matrix':matrix,'width': 900,'verb':'','conjuction':'','noun':'','padding':0.1,'symmetric':False,'asymmetric':False,'allow_download':True}
+  
+
+    user=st.secrets["user"]
+    key=st.secrets["key"]
+
+   
+    result = requests.post(url, json=payload, auth=(user, key))
+
+
+    c=result.content.decode("utf-8")
+
+    return components.html(
+        c,
+        height=1000
+    ) 
 
 
 
-import awesome_streamlit as ast
 
 
 def write():
     """Used to write the page in the app.py file"""
     with st.spinner("Loading About ..."):
-        #ast.shared.components.title_awesome(" - About")
+        ast.shared.components.title_awesome(" - About")
         st.sidebar.markdown(
             """
 My experience as an accountant combined with my programming skills allow me to design and implement tools that capitalize on data mining, automation and machine learning.
-
 My mission is to conceptualize and be instrumental in designing what every accounting department will look like tomorrow.
-
 To get a glimpse of my other projects, visit my [blog] (https://thierrytheg.pythonanywhere.com)
-
 I hope you find it useful as much as I have and I look forward to your feedback and suggestions for improvement.
-
-
 """,
             unsafe_allow_html=True,
         )
+
+
 
 def download_link_csv(object_to_download, download_filename, download_link_text):
     if isinstance(object_to_download,pd.DataFrame):
@@ -59,63 +85,29 @@ if option=="Intercompany":
         if uploaded_file is not None:
             try:
                 df=pd.read_excel(uploaded_file)
-                matrix=df.to_numpy()
+                generate_chord(df)  
+
 
             except:
                 try:
                     df=pd.read_csv(uploaded_file)
-                    matrix=df.to_numpy()
+                    generate_chord(df)  
+
 
                 except:
                     pass
 
         else:
             df=pd.read_excel('intercompany.xlsx')
-            matrix=df.to_numpy()
-            #matrix=matrix.to_list()
-            
-            #st.error("You are currently viewing a sample dataset. Upload your own file to view your data.")
+            generate_chord(df)  
+
     except:
         pass
     
-    
-    
-    #matrix = [
-    #[0, 0, 50000, 732000],
-    #[0, 0, 0, 3549285],
-    #[50000, 0, 0, 7046743],
-    #[732000, 3549285, 7046743, 0],
-    #]
-
-    st.write((df.T).to_numpy())
-    
-    names = ["Company 1", "Company 2", "Company 3", "Company 4"]
-    
-
-    url = "https://api.shahin.dev/chord"
-    payload={'names': names, 'matrix':matrix,'width': 500,'verb':'','conjuction':'','noun':'','padding':0.5,'symmetric':False,'asymmetric':False}
-  
-
-    user=st.secrets["user"]
-    key=st.secrets["key"]
-
-    result = requests.post(url, json=payload, auth=(user, key))
+    generate_chord(df)  
 
 
-    c=result.content.decode("utf-8")
-
-
-
-    #  4 collapse example
-    components.html(
-        c,
-        height=1000
-    ) 
 if option=="GL Outliers":
-
-
-
-
 
     uploaded_file = st.file_uploader("Choose a file")
 
@@ -205,7 +197,6 @@ if option=="GL Outliers":
 
     except Exception as e:
         pass
-
 
 
 
