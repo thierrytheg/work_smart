@@ -89,7 +89,8 @@ if option=="Intercompany":
                     generate_chord(df)  
                     
                 except Exception as e:
-                    st.error('error1'n\'nerror2')
+                    st.error(error1)
+                    st.error(error2)
                     st.stop()
 
         else:
@@ -97,7 +98,8 @@ if option=="Intercompany":
             generate_chord(df) 
 
     except Exception as e:
-        st.error('error1'n\'nerror2')
+        st.error(error1)
+        st.error(error2)
         st.stop()
     
     #generate_chord(df)  
