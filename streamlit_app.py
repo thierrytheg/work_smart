@@ -86,9 +86,9 @@ if option=="Intercompany":
                 try:
                     df=pd.read_csv(uploaded_file)
                     generate_chord(df)  
-
+                    
                 except Exception as e:
-                    st.error(e," Make sure to use the template to avoid any errors. If the problem persists, do not hesitate to contact me.")
+                    st.error("Make sure to use the template to avoid any errors. If the problem persists, do not hesitate to contact me.")
                     st.stop()
 
         else:
@@ -96,8 +96,7 @@ if option=="Intercompany":
             generate_chord(df) 
 
     except Exception as e:
-              
-        st.error(e," Make sure to use the template to avoid any errors. If the problem persists, do not hesitate to contact me.")
+        st.error("Make sure to use the template to avoid any errors. If the problem persists, do not hesitate to contact me.")
         st.stop()
     
     #generate_chord(df)  
