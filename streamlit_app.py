@@ -10,6 +10,9 @@ import json
 import streamlit.components.v1 as components
 import awesome_streamlit as ast
 
+error1='Make sure to use the template to avoid any errors.'
+error2='If the problem persists, do not hesitate to contact me.'
+
 def generate_chord(df):
     df_pivot=df.pivot_table(values='Amount',
                         index=['Company From'],
@@ -80,15 +83,13 @@ if option=="Intercompany":
                 df=pd.read_excel(uploaded_file)
                 generate_chord(df)  
                 
-
-
             except:
                 try:
                     df=pd.read_csv(uploaded_file)
                     generate_chord(df)  
                     
                 except Exception as e:
-                    st.error("Make sure to use the template to avoid any errors. If the problem persists, do not hesitate to contact me.")
+                    st.error('error1'n\'nerror2')
                     st.stop()
 
         else:
@@ -96,7 +97,7 @@ if option=="Intercompany":
             generate_chord(df) 
 
     except Exception as e:
-        st.error("Make sure to use the template to avoid any errors. If the problem persists, do not hesitate to contact me.")
+        st.error('error1'n\'nerror2')
         st.stop()
     
     #generate_chord(df)  
