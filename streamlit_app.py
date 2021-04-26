@@ -37,7 +37,7 @@ def generate_chord(df):
         c,
         height=1000
     ) 
-    st.stop()
+
 
 
 
@@ -97,6 +97,7 @@ if option=="Intercompany":
                 except Exception as e:
                     #@st.cache(suppress_st_warning=True)
                     st.error("An error occured: %s" %e)
+                    st.stop()
 
         else:
             df=pd.read_excel('intercompany.xlsx')
@@ -105,6 +106,7 @@ if option=="Intercompany":
     except Exception as e:
         #@st.cache(suppress_st_warning=True)
         st.error("An error occured: %s" %e)
+        st.stop()
     
     generate_chord(df)  
 
