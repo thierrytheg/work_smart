@@ -95,7 +95,7 @@ if option=="Intercompany":
 
 
                 except Exception as e:
-                    @st.cache(suppress_st_warning=True)
+                    #@st.cache(suppress_st_warning=True)
                     st.error("An error occured: %s" %e)
 
         else:
