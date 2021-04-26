@@ -46,7 +46,7 @@ def generate_chord(df):
 def write():
     """Used to write the page in the app.py file"""
     with st.spinner("Loading About ..."):
-        ast.shared.components.title_awesome(" - About")
+        #ast.shared.components.title_awesome(" - About")
         st.sidebar.markdown(
             """
 My experience as an accountant combined with my programming skills allow me to design and implement tools that capitalize on data mining, automation and machine learning.
