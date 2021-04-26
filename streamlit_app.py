@@ -95,8 +95,8 @@ if option=="Intercompany":
 
 
                 except Exception as e:
-                    #@st.cache(suppress_st_warning=True)
-                    st.error("An error occured: %s" %e)
+                    
+                    st.error("An error occured: %s./n Make sure" %e)
                     st.stop()
 
         else:
@@ -104,8 +104,8 @@ if option=="Intercompany":
             generate_chord(df)  
 
     except Exception as e:
-        #@st.cache(suppress_st_warning=True)
-        st.error("An error occured: %s" %e)
+       
+        st.error("An error occured: %s./n Make sure" %e)
         st.stop()
     
     generate_chord(df)  
