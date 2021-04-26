@@ -8,7 +8,7 @@ import numpy as np
 import requests
 import json
 import streamlit.components.v1 as components
-#import awesome_streamlit as ast
+import awesome_streamlit as ast
 
 
 def generate_chord(df):
