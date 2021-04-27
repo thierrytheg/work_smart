@@ -85,13 +85,11 @@ if option=="Intercompany":
         if uploaded_file is not None:
             try:
                 df=pd.read_excel(uploaded_file)
-                df['Amount']=(df['Amount']).astype(str)
                 generate_chord(df)  
                 
             except:
                 try:
                     df=pd.read_csv(uploaded_file)
-                    df['Amount']=(df['Amount']).astype(str)
                     generate_chord(df)  
                     
                 except Exception as e:
@@ -101,7 +99,6 @@ if option=="Intercompany":
 
         else:
             df=pd.read_excel('intercompany.xlsx')
-            df['Amount']=(df['Amount']).astype(str)
             generate_chord(df) 
 
     except Exception as e:
