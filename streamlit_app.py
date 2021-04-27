@@ -95,7 +95,7 @@ if option=="Intercompany":
                 except Exception as e:
                     st.error(error1)
                     st.error(error2)
-                    st.stop()
+                    #st.stop()
 
         else:
             df=pd.read_excel('intercompany.xlsx')
@@ -104,7 +104,7 @@ if option=="Intercompany":
     except Exception as e:
         st.error(error1)
         st.error(error2)
-        st.stop()
+        #st.stop()
     
 
 
