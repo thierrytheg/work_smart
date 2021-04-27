@@ -16,7 +16,7 @@ error1='Make sure to use the template to avoid any errors.'
 error2='If the problem persists, do not hesitate to contact me.'
 
 def generate_chord(df):
-    df['Amount']=(df['Amount']).astype(str)
+    
     
     df_pivot=df.pivot_table(values='Amount',
                         index=['Company From'],
@@ -85,11 +85,13 @@ if option=="Intercompany":
         if uploaded_file is not None:
             try:
                 df=pd.read_excel(uploaded_file)
+                df['Amount']=(df['Amount']).astype(int)
                 generate_chord(df)  
                 
             except:
                 try:
                     df=pd.read_csv(uploaded_file)
+                    df['Amount']=(df['Amount']).astype(int)
                     generate_chord(df)  
                     
                 except Exception as e:
@@ -99,6 +101,7 @@ if option=="Intercompany":
 
         else:
             df=pd.read_excel('intercompany.xlsx')
+            df['Amount']=(df['Amount']).astype(int)
             generate_chord(df) 
 
     except Exception as e:
