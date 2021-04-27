@@ -19,10 +19,14 @@ def generate_chord(df):
     
     df['Amount']=df['Amount'].fillna(0)
     
-    st.write(df)
-    
+       
     df['Amount'] = df['Amount'].str.replace('-','')
     df['Amount'] = df['Amount'].str.replace('$','')
+    df['Amount'] = df['Amount'].str.replace('(','')
+    df['Amount'] = df['Amount'].str.replace(')','')
+    
+    st.write(df)
+    
     df['Amount']=abs(df['Amount'].astype(int))
     
     #st.write(df)
