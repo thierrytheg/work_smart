@@ -10,6 +10,8 @@ import json
 import streamlit.components.v1 as components
 import awesome_streamlit as ast
 
+error1=''
+error2=''
 
 def generate_chord(df):
     
