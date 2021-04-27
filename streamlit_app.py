@@ -27,7 +27,7 @@ def generate_chord(df):
     
     #df['Amount']=df['Amount'].fillna(0)
     
-    df['Amount']=df['Amount'].astype(float))
+    df['Amount']=df['Amount'].astype(float)
     
     st.write(df)
     
