@@ -15,6 +15,8 @@ error2='test'
 
 def generate_chord(df):
        
+    df['Amount']=df['Amount'].astype(str)       
+
     df['Amount'] = df['Amount'].str.replace('-','')
     df['Amount'] = df['Amount'].str.replace('$','')
     df['Amount'] = df['Amount'].str.replace('(','')
