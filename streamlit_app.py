@@ -10,13 +10,9 @@ import json
 import streamlit.components.v1 as components
 import awesome_streamlit as ast
 
-error1='test'
-error2='test'
-
 def generate_chord(df):
        
     df['Amount']=df['Amount'].astype(str)       
-
     df['Amount'] = df['Amount'].str.replace('-','')
     df['Amount'] = df['Amount'].str.replace('$','')
     df['Amount'] = df['Amount'].str.replace('(','')
@@ -102,8 +98,7 @@ if option=="Intercompany":
                     
                 except Exception as e:
                     st.error(e)
-                    #st.error(error2)
-                    #st.stop()
+                    st.stop()
 
         else:
             df=pd.read_excel('intercompany.xlsx')
@@ -111,8 +106,7 @@ if option=="Intercompany":
 
     except Exception as e:
         st.error(e)
-        #st.error(error2)
-        #st.stop()
+        st.stop()
     
 
 
