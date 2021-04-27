@@ -24,6 +24,7 @@ def generate_chord(df):
     df['Amount'] = df['Amount'].str.replace('$','')
     df['Amount'] = df['Amount'].str.replace('(','')
     df['Amount'] = df['Amount'].str.replace(')','')
+    df['Amount'] = df['Amount'].str.replace(',','')
     
     st.write(df)
     
