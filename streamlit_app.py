@@ -15,7 +15,7 @@ error2='test'
 
 def generate_chord(df):
     
-    #df['Amount']=(df.fillna(0)).astype(int)
+    df['Amount']=df.fillna(0)
     
     
     df_pivot=df.pivot_table(values='Amount',
