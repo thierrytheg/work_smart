@@ -16,7 +16,7 @@ error1='Make sure to use the template to avoid any errors.'
 error2='If the problem persists, do not hesitate to contact me.'
 
 def generate_chord(df):
-    df['Amount']=(df['Amount']).astype(int)
+    df['Amount']=(df['Amount']).astype(str)
     
     df_pivot=df.pivot_table(values='Amount',
                         index=['Company From'],
