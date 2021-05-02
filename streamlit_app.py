@@ -12,7 +12,8 @@ import awesome_streamlit as ast
 
 def write_bio():
     c=  st.markdown("""
-<p>My experience as an accountant combined with my programming skills allow me to design and implement tools that capitalize on data mining, automation and machine learning.<br />My mission is to conceptualize and be instrumental in designing what every accounting department will look like tomorrow.<br /><br />To get a glimpse of my other projects, visit my [blog] (https://thierrytheg.pythonanywhere.com) I hope you find it useful as much as I have and I look forward to your feedback and suggestions for improvement.</p>
+<p>My experience as an accountant combined with my programming skills allow me to design and implement tools that capitalize on data mining, automation and machine learning.</p>
+<p>My mission is to conceptualize and be instrumental in designing what every accounting department will look like tomorrow.<br /><br />To get a glimpse of my other projects, visit my <a href="(https://thierrytheg.pythonanywhere.com)" target="_blank">blog</a> I hope you find it useful as much as I have and I look forward to your feedback and suggestions for improvement.</p>
 """,unsafe_allow_html=True)
     
 def generate_chord(df):
