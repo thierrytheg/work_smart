@@ -26,7 +26,7 @@ My mission is to conceptualize and be instrumental in designing what every accou
 To get a glimpse of my other projects, visit my [blog] (https://thierrytheg.pythonanywhere.com)
 I hope you find it useful as much as I have and I look forward to your feedback and suggestions for improvement.
 """
-    return components.html(c)
+    return components.html(c,unsafe_allow_html=True)
     
 def generate_chord(df):
        
