@@ -20,7 +20,7 @@ I hope you find it useful as much as I have and I look forward to your feedback 
 """,unsafe_allow_html=True)
 
 def write_bio():
-    c="<!DOCTYPE html>
+    c= """<!DOCTYPE html>
     <html>
     <head>
     <title>Page Title</title>
@@ -29,7 +29,7 @@ def write_bio():
     <h1>This is a Heading</h1>
     <p>This is a paragraph.</p>
     </body>
-    </html>"
+    </html> """
     return components.html(c)
     
 def generate_chord(df):
