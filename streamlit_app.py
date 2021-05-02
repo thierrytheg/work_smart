@@ -57,7 +57,7 @@ def generate_chord(df):
 
     return components.html(
         c,
-        height=1000
+        height=900
     ) 
 
 def download_link_csv(object_to_download, download_filename, download_link_text):
