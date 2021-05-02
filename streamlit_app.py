@@ -17,7 +17,8 @@ def write_bio():
 ,unsafe_allow_html=True)
 
 def feedback():
-    st.sidebar.markdown("""To get a glimpse of my other projects, visit my [blog](https://thierrytheg.pythonanywhere.com)">. I hope you find it useful as much as I have and I look forward to your feedback and suggestions for improvement.</p>""",
+    st.sidebar.markdown("""To get a glimpse of my other projects, visit my [blog](https://thierrytheg.pythonanywhere.com).<br><br>
+    I hope you find it useful as much as I have and I look forward to your feedback and suggestions for improvement.</p>""",
     unsafe_allow_html=True)
     
 def generate_chord(df):
