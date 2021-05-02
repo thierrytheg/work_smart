@@ -126,8 +126,7 @@ if option=="GL Outliers":
 
         else:
             df=pd.read_excel('sample_data.xlsx')
-            #st.error("You are currently viewing a sample dataset. Upload your own file to view your data.")
-            st.error("My error")
+            st.error("You are currently viewing a sample dataset. Upload your own file to view your data.")
     except:
         pass
 
