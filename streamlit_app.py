@@ -74,6 +74,7 @@ if option=="Choose one of the options below":
     feedback()
     
 if option=="Intercompany":
+    feedback()
     df=pd.read_excel('intercompany.xlsx')
     
     tmp_download_link_csv = download_link_csv(df, 'intercompany_template.csv', 'Download the template here.')
@@ -107,6 +108,7 @@ if option=="Intercompany":
 
 
 if option=="GL Outliers":
+    feedback()
 
     uploaded_file = st.file_uploader("Choose a file")
 
