@@ -19,6 +19,21 @@ To get a glimpse of my other projects, visit my [blog] (https://thierrytheg.pyth
 I hope you find it useful as much as I have and I look forward to your feedback and suggestions for improvement.
 """,unsafe_allow_html=True)
 
+def write_bio():
+    c='<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>'
+    return components.html(c)
+    
 def generate_chord(df):
        
     df['Amount']=df['Amount'].astype(str)       
@@ -67,11 +82,8 @@ def download_link_csv(object_to_download, download_filename, download_link_text)
 
 option=st.sidebar.selectbox("",("Choose one of the options below","GL Outliers","Intercompany"))
 
-#write()
-write_bio()
-
 if option=="Choose one of the options below":
-    pass
+    print(write_bio())
     
 if option=="Intercompany":
     df=pd.read_excel('intercompany.xlsx')
