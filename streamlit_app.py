@@ -77,7 +77,7 @@ if option=="Intercompany":
     feedback()
     df=pd.read_excel('intercompany.xlsx')
     
-    tmp_download_link_csv = download_link_csv(df, 'intercompany_template.csv', 'Download the template here.')
+    tmp_download_link_csv = download_link_csv(df, 'intercompany_template.csv', 'Download the template here and upload your file to vizualize your data.')
     st.markdown(tmp_download_link_csv, unsafe_allow_html=True)
     
     uploaded_file = st.file_uploader("Choose a file")
