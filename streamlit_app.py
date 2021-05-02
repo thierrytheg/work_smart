@@ -20,16 +20,12 @@ I hope you find it useful as much as I have and I look forward to your feedback 
 """,unsafe_allow_html=True)
 
 def write_bio():
-    c= """<!DOCTYPE html>
-    <html>
-    <head>
-    <title>Page Title</title>
-    </head>
-    <body>
-    <h1>This is a Heading</h1>
-    <p>This is a paragraph.</p>
-    </body>
-    </html> """
+    c=  """
+My experience as an accountant combined with my programming skills allow me to design and implement tools that capitalize on data mining, automation and machine learning.
+My mission is to conceptualize and be instrumental in designing what every accounting department will look like tomorrow.
+To get a glimpse of my other projects, visit my [blog] (https://thierrytheg.pythonanywhere.com)
+I hope you find it useful as much as I have and I look forward to your feedback and suggestions for improvement.
+"""
     return components.html(c)
     
 def generate_chord(df):
